@@ -329,7 +329,7 @@ public final class AccurateMathCalc {
         if (d < 8e298 && d > -8e298) {
             final double a = d * HEX_40000000;
             //在此注入缺陷，原代码：split[0] = (d + a) - a;
-            split[0] = (d + a) + a;
+            split[0] = (d + a) - a;
             split[1] = d - split[0];
         } else {
             final double a = d * 9.31322574615478515625E-10;
